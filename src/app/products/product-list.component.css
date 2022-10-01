@@ -1,0 +1,14 @@
+div > input {
+    width: 35vw;
+    height: 2em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+thead {
+    color: #2e6da4;
+}
+
+table > tbody > tr > td {
+    height: 80px;
+}

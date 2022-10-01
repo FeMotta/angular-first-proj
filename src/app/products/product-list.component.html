@@ -1,0 +1,49 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-2'>Filter by:</div>
+      <div class='col-md-2'>
+        <input type='text' [(ngModel)]="listFilter"/>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-2'>
+        <h4>Filtrando por: {{listFilter}}</h4>
+      </div>
+    </div>
+    <div class='table-responsive'>
+      <table class='table' *ngIf="products.length">
+        <thead>
+          <tr>
+            <th>
+              <button class='btn btn-primary'  (click)="toggleImage()">{{showImage ? 'Esconder' : 'Mostar'}} Imagem</button>
+            </th>
+            <th>Produto</th>
+            <th>Codigo</th>
+            <th>Disponivel</th>
+            <th>Preço</th>
+            <th>5 Estrelas</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let p of filteredProducts">
+          <tr>
+            <td>
+              <img *ngIf="showImage" [src]="p.imageUrl" [title]="p.productName" [style.width.px]="imageWidth" [style.margin.px]="imageMargin">
+            </td>
+            <td>
+              <a [routerLink]="['/produtos', p.productId]">{{p.productName}}</a>
+            </td>
+            <td>{{p.productCode | convertToSpaces:'-'}}</td>
+            <td>{{p.releaseDate}}</td>
+            <td>{{p.price | currency:'BRL'}}</td>
+            <td><pm-star [rating]="p.starRating" (ratingClicked)="onRatingClicked($event)"></pm-star></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+<div>Footer</div>
