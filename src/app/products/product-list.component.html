@@ -4,7 +4,7 @@
   </div>
   <div class='card-body'>
     <div class='row'>
-      <div class='col-md-2'>Filter by:</div>
+      <div class='col-md-2'>Filtrar por:</div>
       <div class='col-md-2'>
         <input type='text' [(ngModel)]="listFilter"/>
       </div>
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class='table-responsive'>
-      <table class='table' *ngIf="products.length">
+      <table class='table table-hover' *ngIf="products.length">
         <thead>
           <tr>
             <th>
@@ -34,7 +34,7 @@
               <img *ngIf="showImage" [src]="p.imageUrl" [title]="p.productName" [style.width.px]="imageWidth" [style.margin.px]="imageMargin">
             </td>
             <td>
-              <a [routerLink]="['/produtos', p.productId]">{{p.productName}}</a>
+              <a class="text-decoration-none" [routerLink]="['/produtos', p.productId]">{{p.productName}}</a>
             </td>
             <td>{{p.productCode | convertToSpaces:'-'}}</td>
             <td>{{p.releaseDate}}</td>
@@ -45,5 +45,4 @@
       </table>
     </div>
   </div>
-  </div>
-<div>Footer</div>
+</div>

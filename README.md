@@ -8,6 +8,6 @@ Run `ng serve` para abrir um servidor local. Va até `http://localhost:4200/`.
 
 ## Projeto
 
-Desenvolvido através do curso de `Angular 6: The Big Picture` no Pluralsight com o professor Joe Eames
+Desenvolvido através do curso de `Angular 6: The Big Picture` no Pluralsight com a professora Deborah Kurata3
 
 

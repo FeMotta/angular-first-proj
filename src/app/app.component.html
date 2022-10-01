@@ -1,10 +1,13 @@
-<nav class="navbar navbar-expand navbar-light bg-light">
-  <a class="navbar-brand">{{pageTitle}}</a>
-  <ul class="nav nav-pills">
-    <button class="btn btn-primary"><li class="" routerLink="/home">Home</li></button>
-    <button class="btn btn-primary"><li class="" routerLink="/produtos">Produtos</li></button>
-  </ul>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">{{pageTitle}}</a>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <li class="btn btn-primary" routerLink="/home">Home</li>
+        <li class="btn btn-primary" routerLink="/produtos">Produtos</li>
+    </div>
+  </div>
 </nav>
+
 <div class="container">
   <router-outlet></router-outlet>
 </div>

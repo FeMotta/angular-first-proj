@@ -12,8 +12,7 @@ export class StarComponent implements OnChanges {
     @Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();
 
     onClick(): void {
-        // quando clicado aumentar meia estrela
-        this.ratingClicked.emit(`The rating ${this.rating} was clicked!`);
+        this.ratingClicked.emit(`A avalição do produto é ${this.rating}`);
     }
     
     ngOnChanges(changes: SimpleChanges): void {
